@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500&display=swap"
+    />
+  </head>
+  <body>
+    <main class="page">
+      <header class="page__header">
+        <h1 class="page__title">{{ title }}</h1>
+        <p class="page__subtitle">2000년 감성의 문자 커뮤니티</p>
+      </header>
+      <section class="phone">
+        <div class="phone__antenna"></div>
+        <div class="phone__speaker"></div>
+        <div class="phone__body">
+          <div class="phone__screen">
+            <div class="screen__status-bar">
+              <span class="status__icon">♪</span>
+              <span class="status__label">문자메세지</span>
+              <span class="status__count" id="message-count">0</span>
+            </div>
+            <div class="screen__message" id="message-feed"></div>
+            <div class="screen__toolbar">
+              <span class="toolbar__button">메뉴</span>
+              <span class="toolbar__nav">▶</span>
+              <span class="toolbar__input">A 특 1</span>
+            </div>
+          </div>
+          <form class="composer" id="composer-form">
+            <div class="composer__row">
+              <label class="composer__label" for="author-input">보내는이</label>
+              <input
+                id="author-input"
+                class="composer__input"
+                name="author"
+                maxlength="32"
+                placeholder="닉네임"
+                required
+              />
+            </div>
+            <div class="composer__row composer__row--textarea">
+              <label class="composer__label" for="body-input">메세지</label>
+              <textarea
+                id="body-input"
+                class="composer__textarea"
+                name="body"
+                maxlength="280"
+                placeholder="우리의 청춘은 자주색이 바뀌었다..."
+                required
+              ></textarea>
+            </div>
+            <div class="composer__actions">
+              <button class="composer__submit" type="submit">전송</button>
+            </div>
+          </form>
+        </div>
+        <div class="phone__keypad">
+          <div class="keypad__grid">
+            <button type="button" class="keypad__key">1</button>
+            <button type="button" class="keypad__key">2<br /><span>ABC</span></button>
+            <button type="button" class="keypad__key">3<br /><span>DEF</span></button>
+            <button type="button" class="keypad__key">4<br /><span>GHI</span></button>
+            <button type="button" class="keypad__key">5<br /><span>JKL</span></button>
+            <button type="button" class="keypad__key">6<br /><span>MNO</span></button>
+            <button type="button" class="keypad__key">7<br /><span>PQRS</span></button>
+            <button type="button" class="keypad__key">8<br /><span>TUV</span></button>
+            <button type="button" class="keypad__key">9<br /><span>WXYZ</span></button>
+            <button type="button" class="keypad__key keypad__key--wide">*<br /><span>특수</span></button>
+            <button type="button" class="keypad__key">0<br /><span>공백</span></button>
+            <button type="button" class="keypad__key keypad__key--wide">#<br /><span>변환</span></button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <template id="message-template">
+      <article class="message">
+        <header class="message__meta">
+          <span class="message__author"></span>
+          <time class="message__timestamp"></time>
+        </header>
+        <p class="message__body"></p>
+        <button type="button" class="message__delete" title="메세지 삭제">삭제</button>
+      </article>
+    </template>
+    <script src="/static/app.js" type="module"></script>
+  </body>
+</html>
