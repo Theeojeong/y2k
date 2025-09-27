@@ -293,6 +293,22 @@ body {
   white-space: pre-wrap;
 }
 
+/* Compose To suggestions */
+.to-suggest {
+  position: absolute;
+  top: 28px;
+  left: 0.6rem;
+  right: 0.6rem;
+  background: #fff;
+  border: 1px solid #c7cbd3;
+  z-index: 5;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+  overflow: hidden;
+}
+.to-suggest__item { padding: 6px 10px; cursor: pointer; }
+.to-suggest__item:hover { background: #eef0f3; }
+
 .composer__row {
   display: flex;
   flex-direction: column;

@@ -32,6 +32,9 @@ class Settings(BaseSettings):
     # Device
     device_name: str = Field(default="ME", env="DEVICE_NAME")
 
+    # Session
+    session_secret: str = Field(default="dev-secret-change", env="SESSION_SECRET")
+
     @validator("cors_origins")
     def _normalize_cors(cls, v: str) -> str:  # noqa: D401
         # Allow comma-separated list; leave '*' as-is
