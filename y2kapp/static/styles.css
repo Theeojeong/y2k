@@ -1,19 +1,20 @@
 :root {
   color-scheme: only light;
-  font-family: "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  font-family: "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic",
+    sans-serif;
   /* Chrome Silver theme */
-  --bg: #d9dbdf;                 /* page background base */
-  --bg-dark: #c3c6cc;            /* page background falloff */
-  --phone-body: #d1d4d9;         /* device shell */
-  --phone-body-dark: #b8bcc3;    /* device shell shadow */
-  --phone-screen: #f5f6f8;       /* LCD off-white */
-  --status-start: #d5d8dd;       /* status bar gradient */
+  --bg: #d9dbdf; /* page background base */
+  --bg-dark: #c3c6cc; /* page background falloff */
+  --phone-body: #d1d4d9; /* device shell */
+  --phone-body-dark: #b8bcc3; /* device shell shadow */
+  --phone-screen: #f5f6f8; /* LCD off-white */
+  --status-start: #d5d8dd; /* status bar gradient */
   --status-end: #bcc1c8;
-  --toolbar-start: #eef0f3;      /* toolbar gradient */
+  --toolbar-start: #eef0f3; /* toolbar gradient */
   --toolbar-end: #d6d9de;
-  --bezel: #aeb4bb;              /* bezel/border */
-  --speaker: #9aa1a7;            /* speaker slot */
-  --accent: #5c8ecb;             /* subtle chrome-blue accent */
+  --bezel: #aeb4bb; /* bezel/border */
+  --speaker: #9aa1a7; /* speaker slot */
+  --accent: #5c8ecb; /* subtle chrome-blue accent */
   --danger: #c94b4b;
 }
 
@@ -66,8 +67,12 @@ body {
   gap: 1.5rem;
   padding: 2rem 2rem 2.5rem;
   border-radius: 40px;
-  background: linear-gradient(145deg, var(--phone-body) 0%, var(--phone-body-dark) 70%);
-  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.30);
+  background: linear-gradient(
+    145deg,
+    var(--phone-body) 0%,
+    var(--phone-body-dark) 70%
+  );
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3);
 }
 
 /* antenna removed */
@@ -84,7 +89,11 @@ body {
 }
 
 .phone__body {
-  background: linear-gradient(180deg, var(--phone-body) 0%, var(--phone-body-dark) 100%);
+  background: linear-gradient(
+    180deg,
+    var(--phone-body) 0%,
+    var(--phone-body-dark) 100%
+  );
   padding: 1.5rem;
   border-radius: 22px;
   width: 100%;
@@ -107,14 +116,20 @@ body {
 }
 
 /* Generic hidden attribute enforcement */
-[hidden] { display: none !important; }
+[hidden] {
+  display: none !important;
+}
 
 .screen__status-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.35rem 0.75rem;
-  background: linear-gradient(180deg, var(--status-start) 0%, var(--status-end) 100%);
+  background: linear-gradient(
+    180deg,
+    var(--status-start) 0%,
+    var(--status-end) 100%
+  );
   color: #1c1f24;
   font-size: 0.85rem;
   font-weight: 600;
@@ -173,7 +188,11 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0.3rem 0.4rem;
-  background: linear-gradient(180deg, var(--toolbar-start) 0%, var(--toolbar-end) 100%);
+  background: linear-gradient(
+    180deg,
+    var(--toolbar-start) 0%,
+    var(--toolbar-end) 100%
+  );
   font-size: 0.8rem;
   color: #1c1815;
   font-weight: 600;
@@ -199,7 +218,9 @@ body {
   cursor: pointer;
   text-align: center;
 }
-.menu-item:hover { background: #e4e7ec; }
+.menu-item:hover {
+  background: #e4e7ec;
+}
 
 .toolbar__tab {
   background: transparent;
@@ -208,8 +229,12 @@ body {
   border-radius: 8px;
   cursor: pointer;
 }
-.toolbar__tab:hover { background: rgba(0,0,0,0.06); }
-.toolbar__tab[aria-current="page"] { background: rgba(0,0,0,0.12); }
+.toolbar__tab:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+.toolbar__tab[aria-current="page"] {
+  background: rgba(0, 0, 0, 0.12);
+}
 
 .composer {
   background: rgba(255, 255, 255, 0.8);
@@ -223,7 +248,11 @@ body {
 }
 
 /* message list and detail */
-.message-list { display: flex; flex-direction: column; gap: 8px; }
+.message-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
 .message-item {
   background: #f8f4e8;
   border: 1px solid #c7bea3;
@@ -231,13 +260,38 @@ body {
   padding: 8px 10px;
   cursor: pointer;
 }
-.message-item__meta { display: flex; justify-content: space-between; font-size: 0.82rem; color: #5a5147; }
-.message-item__title { font-weight: 600; color: #1c1815; }
-.message-item__preview { margin-top: 4px; color: #3a322b; font-size: 0.92rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.message-item__meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  color: #5a5147;
+}
+.message-item__title {
+  font-weight: 600;
+  color: #1c1815;
+}
+.message-item__preview {
+  margin-top: 4px;
+  color: #3a322b;
+  font-size: 0.92rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
-.message-detail { background: transparent; }
-.message-detail__meta { display: flex; justify-content: space-between; font-size: 0.84rem; color: #5a5147; margin-bottom: 8px; }
-.message-detail__body { white-space: pre-wrap; }
+.message-detail {
+  background: transparent;
+}
+.message-detail__meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.84rem;
+  color: #5a5147;
+  margin-bottom: 8px;
+}
+.message-detail__body {
+  white-space: pre-wrap;
+}
 
 .composer__row {
   display: flex;
@@ -328,7 +382,8 @@ body {
   font-size: 1.1rem;
   font-weight: 600;
   line-height: 1.1;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
   cursor: pointer;
   transition: transform 0.1s ease;
 }
@@ -417,3 +472,22 @@ body {
     padding: 1rem 1.2rem;
   }
 }
+
+/* --- Compose screen To/header/layout overrides (restore) --- */
+#screen[data-mode="compose"] { padding: 0 0.6rem 0 !important; scroll-padding-top: 0; }
+#screen[data-mode="compose"] .message-detail { margin-top: 0 !important; padding-top: 24px !important; }
+#screen[data-mode="compose"] .message-detail__meta {
+  position: absolute; top: 0; left: 0; right: 0;
+  background: var(--phone-screen);
+  z-index: 2;
+  padding: 4px 0.6rem; box-sizing: border-box;
+  display: flex; justify-content: flex-start; align-items: baseline; gap: 6px;
+}
+#compose-to[contenteditable="true"]:empty:before { content: attr(data-placeholder); color: rgba(0,0,0,0.45); }
+#compose-to[contenteditable="true"]:focus { outline: none; }
+
+/* Rectangular menu buttons */
+.menu-item { border-radius: 0 !important; }
+
+/* Fixed screen height for internal scroll */
+.phone__screen { height: 360px; }

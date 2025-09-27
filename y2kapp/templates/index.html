@@ -28,26 +28,7 @@
               <button class="toolbar__tab" data-mode="compose" type="button">작성</button>
             </div>
           </div>
-          <form class="composer" id="composer-form">
-            <div class="composer__row">
-              <label class="composer__label" for="recipient-input">받는이</label>
-              <input
-                id="recipient-input"
-                class="composer__input"
-                name="recipient"
-                maxlength="64"
-                placeholder="연락처 또는 이름"
-                required
-              />
-            </div>
-            <div class="composer__row composer__row--textarea">
-              <label class="composer__label">메시지</label>
-              <!-- 별도 입력칸 제거: 폰 화면에 직접 입력 -->
-            </div>
-            <div class="composer__actions">
-              <button class="composer__submit" type="submit">전송</button>
-            </div>
-          </form>
+          <form class="composer" id="composer-form" action="#" method="post" novalidate hidden></form>
         </div>
       </section>
     </main>
